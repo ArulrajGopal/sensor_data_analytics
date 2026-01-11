@@ -8,7 +8,8 @@ from data_gen_utils import *
 DATASET_MAP = {
     "Model": model_data_gen,
     "Options": options_data_gen,
-    "Variant":variant_data_gen
+    "Variant":variant_data_gen,
+    "VehicleInstance":vehile_instance_data_gen
 }
 
 
