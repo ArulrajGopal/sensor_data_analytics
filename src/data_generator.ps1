@@ -7,7 +7,10 @@ uv run src/data_generator.py --dataset Variant --rows-per-file 500
 
 uv run src/data_generator.py --dataset Options --rows-per-file 1000
 
-uv run src/data_generator.py --dataset VehicleInstance --rows-per-file 40000000
+# uv run src/data_generator.py --dataset VehicleInstance --rows-per-file 40000000
+
+# uv run src/data_generator.py --dataset VehicleInstance --rows-per-file 40000000
+
 # -------------------------------
 # Upload CSV files to ADLS Gen2
 # Uses SAS extracted from AZURE_CONNECTION_STRING

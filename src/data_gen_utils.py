@@ -94,4 +94,27 @@ def vehile_instance_data_gen(file_num, rows):
     return output_path
 
 
+def unit_a_data_gen(file_num, rows):
+
+    output_path = f'C:/Users/Arulraj Gopal/OneDrive/Desktop/data/ds_unit_a_data_{rows}_rows_file_{file_num}.csv'
+
+    duckdb.execute(f"""
+        COPY (
+            SELECT  
+                t.row_id as record_id,
+                (1 + (RANDOM() * 39999999)::INT) AS vehicle_id,
+                   
+
+                CAST(NOW() - INTERVAL (RANDOM() * 365) DAY AS TIMESTAMP) AS __insert_time
+
+            FROM generate_series(1, {rows}) t(row_id)
+        )
+        TO '{output_path}'
+        (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+    """)
+    
+    print(f"Completed file {file_num}: {output_path}")
+    return output_path
+
+
 
