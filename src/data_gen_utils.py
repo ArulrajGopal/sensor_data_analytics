@@ -1,6 +1,4 @@
 import duckdb
-from config import *
-
 
 def model_data_gen(file_num, rows):
 
