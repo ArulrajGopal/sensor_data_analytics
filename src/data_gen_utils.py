@@ -2,7 +2,7 @@ import duckdb
 
 def model_data_gen(file_num, rows):
 
-    output_path = f'C:/Users/Arulraj Gopal/OneDrive/Desktop/data/Model/ds_{rows}_rows_file_{file_num}.csv'
+    output_path = f'C:/Users/Arulraj Gopal/OneDrive/Desktop/data/ds_model_{rows}_rows_file_{file_num}.csv'
 
     duckdb.execute(f"""
         COPY (
@@ -24,7 +24,7 @@ def model_data_gen(file_num, rows):
 
 def variant_data_gen(file_num, rows):
 
-    output_path = f'C:/Users/Arulraj Gopal/OneDrive/Desktop/data/Variant/ds_{rows}_rows_file_{file_num}.csv'
+    output_path = f'C:/Users/Arulraj Gopal/OneDrive/Desktop/data/ds_variant_{rows}_rows_file_{file_num}.csv'
 
     duckdb.execute(f"""
         COPY (
@@ -47,7 +47,7 @@ def variant_data_gen(file_num, rows):
 
 def options_data_gen(file_num, rows):
 
-    output_path = f'C:/Users/Arulraj Gopal/OneDrive/Desktop/data/Options/ds_{rows}_rows_file_{file_num}.csv'
+    output_path = f'C:/Users/Arulraj Gopal/OneDrive/Desktop/data/ds_options_{rows}_rows_file_{file_num}.csv'
 
     duckdb.execute(f"""
         COPY (
